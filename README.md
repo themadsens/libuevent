@@ -63,8 +63,9 @@ Use make:
 Installation
 ------------
 Is purely manual, but would be something along the lines of:
- sudo install -m 444 libuevent.so.1 /usr/lib/libuevent.so.1
- sudo install -m 444 luevent.so /usr/lib/lua/5.1/luevent.so
-
+```
+   sudo install -m 444 libuevent.so.1 /usr/lib/libuevent.so.1
+   sudo install -m 444 luevent.so /usr/lib/lua/5.1/luevent.so
+```
 <!-- vim: set syntax=mkd textwidth=79 nofoldenable: -->
 
