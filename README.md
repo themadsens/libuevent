@@ -25,7 +25,7 @@ embedded environments
 
 ### function luevent.addFileIO(fdesc, handler, mode)
 Add a handler on a stream.  The handler will sustain itself GC wise.
-Use *object*:clear() to unregister the handler
+Use `object:clear()` to unregister the handler
 * fdesc   The posix file descriptor "small integer".  
           Use the ":getfd()" method on a "normal" lua stream or socket to obtain fdesc.
 * handler A function object. The handler object is supplied as the first parameter when called.
@@ -35,10 +35,12 @@ Use *object*:clear() to unregister the handler
 ### function luevent.addTimer(msecs, handler)
 Create a new timer object. Implicitly cleared when handler is called.
 Typical usage:
+```
   local hdl
   hdl = luevent.addTimer(50, function() hdl = nil ..... end)
   ......
   if hdl then hdl:clear() hdl = nil end
+```
 Here *hdl* is used to keep track of whether the timer is active.
 
 * msecs   The number of milliseconds until the timer expires
